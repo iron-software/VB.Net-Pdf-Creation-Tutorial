@@ -1,0 +1,710 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15F37DC0-50C4-4735-8E3F-3EC43A42D1B1}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <StartupObject>Tutorial.Module1</StartupObject>
+    <RootNamespace>Tutorial</RootNamespace>
+    <AssemblyName>VB.Net.Pdf.Tutorial</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Console</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VB.Net.Pdf.Tutorial.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VB.Net.Pdf.Tutorial.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="IronPdf, Version=4.4.9.15720, Culture=neutral, PublicKeyToken=94e1c31412563c75, processorArchitecture=MSIL">
+      <HintPath>..\packages\IronPdf.4.4.9\lib\net40\IronPdf.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Module1.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="slideshow\css\simple-slideshow-styles.css~" />
+    <None Include="slideshow\css\styles.css~" />
+    <None Include="slideshow\LICENSE">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\LICENSE-MIT" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\.bin\uglifyjs.lnk" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\.bin\strip-ansi.lnk" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\ansi-styles\package.json" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\ansi-styles\readme.md" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\has-color\package.json" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\has-color\readme.md" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\strip-ansi\package.json" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\strip-ansi\readme.md" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\package.json" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\readme.md" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\.bin\gzip-size.lnk" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\.bin\pretty-bytes.lnk" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\.npmignore" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\LICENSE" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\inherits\LICENSE" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\inherits\package.json" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\inherits\README.md" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\.npmignore" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\float.patch" />
+    <None Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\appveyor.yml" />
+    <None Include="slideshow\node_modules\grunt\CONTRIBUTING.md" />
+    <None Include="slideshow\node_modules\grunt\LICENSE-MIT" />
+    <None Include="slideshow\node_modules\grunt\node_modules\.bin\cake.lnk" />
+    <None Include="slideshow\node_modules\grunt\node_modules\.bin\coffee.lnk" />
+    <None Include="slideshow\node_modules\grunt\node_modules\.bin\js-yaml.lnk" />
+    <None Include="slideshow\node_modules\grunt\node_modules\.bin\nopt.lnk" />
+    <None Include="slideshow\node_modules\grunt\node_modules\.bin\rimraf.lnk" />
+    <None Include="slideshow\node_modules\grunt\node_modules\.bin\which.lnk" />
+    <None Include="slideshow\node_modules\grunt\node_modules\async\.gitmodules" />
+    <None Include="slideshow\node_modules\grunt\node_modules\async\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\async\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\async\Makefile" />
+    <None Include="slideshow\node_modules\grunt\node_modules\async\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\async\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\bin\cake" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\bin\coffee" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\CNAME" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\extras\jsl.conf" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\Rakefile" />
+    <None Include="slideshow\node_modules\grunt\node_modules\coffee-script\README" />
+    <None Include="slideshow\node_modules\grunt\node_modules\colors\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\colors\ReadMe.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\dateformat\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\dateformat\Readme.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\dateformat\test\test_weekofyear.sh" />
+    <None Include="slideshow\node_modules\grunt\node_modules\eventemitter2\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\eventemitter2\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\exit\.jshintrc" />
+    <None Include="slideshow\node_modules\grunt\node_modules\exit\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\exit\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\exit\LICENSE-MIT" />
+    <None Include="slideshow\node_modules\grunt\node_modules\exit\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\exit\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\create-files.sh" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\.jshintrc" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\LICENSE-MIT" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\inherits\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\inherits\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\inherits\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\CONTRIBUTORS" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\sigmund\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\sigmund\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\sigmund\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\bash-results.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\findup-sync\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\getobject\.jshintrc" />
+    <None Include="slideshow\node_modules\grunt\node_modules\getobject\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\getobject\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\getobject\LICENSE-MIT" />
+    <None Include="slideshow\node_modules\grunt\node_modules\getobject\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\getobject\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\graceful-fs\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\graceful-fs\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\graceful-fs\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\graceful-fs\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\inherits\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\inherits\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\glob\test\bash-results.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\.jshintrc" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\LICENSE-MIT" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\component.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\Gemfile" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\Gemfile.lock" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\libpeerconnection.log" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\Rakefile" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\README.markdown" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\.jshintrc" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\LICENSE-MIT" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\test\fixtures\exec.cmd" />
+    <None Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\test\fixtures\exec.sh" />
+    <None Include="slideshow\node_modules\grunt\node_modules\hooker\LICENSE-MIT" />
+    <None Include="slideshow\node_modules\grunt\node_modules\hooker\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\hooker\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\iconv-lite\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\iconv-lite\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\iconv-lite\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\iconv-lite\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\iconv-lite\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\iconv-lite\README.md~" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\examples\custom_types.yaml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\examples\dumper.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\examples\sample_document.yaml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\HISTORY.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\.bin\esparse.lnk" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\.bin\esvalidate.lnk" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\HISTORY.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\component.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\Gemfile" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\Gemfile.lock" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\libpeerconnection.log" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\Rakefile" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\README.markdown" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\CNAME" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\CONTRIBUTING.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\js-yaml\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\lodash\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\lodash\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\CONTRIBUTORS" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\sigmund\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\sigmund\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\sigmund\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\minimatch\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\nopt\.npmignore" />
+    <None Include="slideshow\node_modules\grunt\node_modules\nopt\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\nopt\node_modules\abbrev\CONTRIBUTING.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\nopt\node_modules\abbrev\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\nopt\node_modules\abbrev\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\nopt\node_modules\abbrev\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\nopt\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\nopt\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\rimraf\AUTHORS" />
+    <None Include="slideshow\node_modules\grunt\node_modules\rimraf\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\rimraf\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\rimraf\README.md" />
+    <None Include="slideshow\node_modules\grunt\node_modules\rimraf\test\run.sh" />
+    <None Include="slideshow\node_modules\grunt\node_modules\rimraf\test\setup.sh" />
+    <None Include="slideshow\node_modules\grunt\node_modules\underscore.string\.travis.yml" />
+    <None Include="slideshow\node_modules\grunt\node_modules\underscore.string\Gemfile" />
+    <None Include="slideshow\node_modules\grunt\node_modules\underscore.string\Gemfile.lock" />
+    <None Include="slideshow\node_modules\grunt\node_modules\underscore.string\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\underscore.string\Rakefile" />
+    <None Include="slideshow\node_modules\grunt\node_modules\underscore.string\README.markdown" />
+    <None Include="slideshow\node_modules\grunt\node_modules\which\bin\which" />
+    <None Include="slideshow\node_modules\grunt\node_modules\which\LICENSE" />
+    <None Include="slideshow\node_modules\grunt\node_modules\which\package.json" />
+    <None Include="slideshow\node_modules\grunt\node_modules\which\README.md" />
+    <None Include="slideshow\node_modules\grunt\package.json" />
+    <None Include="slideshow\node_modules\grunt\README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="slideshow\css\simple-slideshow-styles.css" />
+    <Content Include="slideshow\css\styles.css" />
+    <Content Include="slideshow\demo\css\demostyles.css" />
+    <Content Include="slideshow\demo\img\colorado-colors.jpg" />
+    <Content Include="slideshow\demo\img\colorado.jpg" />
+    <Content Include="slideshow\demo\img\medium.jpg" />
+    <Content Include="slideshow\demo\img\monte-vista.jpg" />
+    <Content Include="slideshow\demo\img\public-domain-images-archive-high-quality-resolution-free-download-splitshire-0003.jpg" />
+    <Content Include="slideshow\demo\img\public-domain-images-free-high-resolution-quality-photos-featured-images-0002.jpg" />
+    <Content Include="slideshow\demo\img\public-domain-images-free-stock-photos-brick-wall-rustic-old-metal-doors-private-parking.jpg" />
+    <Content Include="slideshow\demo\img\public-domain-images-free-stock-photos-lego-land-downtown-atlanta-fox-theatre-1.jpg" />
+    <Content Include="slideshow\demo\img\public-domain-images-free-stock-photos-shoes-walking-feet-grey-gravel-.jpg" />
+    <Content Include="slideshow\demo\img\sunrise.jpg" />
+    <Content Include="slideshow\demo\js\hammer.min.js" />
+    <Content Include="slideshow\Gruntfile.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="slideshow\img\arrows-alt_ffffff_64.png" />
+    <Content Include="slideshow\img\compress_ffffff_64.png" />
+    <Content Include="slideshow\index.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="slideshow\js\better-simple-slideshow.js" />
+    <Content Include="slideshow\js\better-simple-slideshow.min.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\index.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\ansi-styles\ansi-styles.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\has-color\index.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\strip-ansi\cli.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\chalk\node_modules\strip-ansi\index.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\index.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\cli.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\index.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\index.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\inherits\inherits.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\inherits\inherits_browser.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\inherits\test.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\duplex.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\lib\_stream_duplex.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\lib\_stream_passthrough.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\lib\_stream_readable.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\lib\_stream_transform.js" />
+    <Content Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\lib\_stream_writable.js" />
+    <Content Include="slideshow\node_modules\grunt\internal-tasks\bump.js" />
+    <Content Include="slideshow\node_modules\grunt\internal-tasks\subgrunt.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\cli.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\config.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\event.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\fail.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\file.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\help.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\option.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\task.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\grunt\template.js" />
+    <Content Include="slideshow\node_modules\grunt\lib\util\task.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\async\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\async\lib\async.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\browser.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\cake.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\coffee-script.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\command.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\grammar.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\helpers.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\lexer.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\nodes.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\optparse.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\parser.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\repl.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\rewriter.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\coffee-script\lib\coffee-script\scope.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\colors\colors.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\colors\example.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\colors\example.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\colors\MIT-LICENSE.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\colors\test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\colors\themes\winston-dark.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\colors\themes\winston-light.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\dateformat\lib\dateformat.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\dateformat\test\test_weekofyear.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\eventemitter2\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\eventemitter2\lib\eventemitter2.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\Gruntfile.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\lib\exit.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\exit_test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\10-stderr.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\10-stdout-stderr.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\10-stdout.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\100-stderr.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\100-stdout-stderr.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\100-stdout.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\1000-stderr.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\1000-stdout-stderr.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\1000-stdout.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\log-broken.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\exit\test\fixtures\log.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\Gruntfile.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\lib\findup-sync.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\examples\g.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\examples\usr-local.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\glob.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\inherits\inherits.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\inherits\inherits_browser.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\inherits\test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\minimatch.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\lib\lru-cache.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\test\basic.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\test\foreach.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\lru-cache\test\memory-leak.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\sigmund\bench.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\sigmund\sigmund.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\node_modules\sigmund\test\basic.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\test\basic.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\test\brace-expand.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\test\caching.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\test\defaults.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\node_modules\minimatch\test\extglob-ending-with-state-char.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\00-setup.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\bash-comparison.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\cwd-test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\globstar-match.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\mark.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\new-glob-optional-options.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\nocase-nomagic.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\pause-resume.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\readme-issue.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\root-nomount.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\root.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\stat.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\glob\test\zz-cleanup.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.compat.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.compat.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.underscore.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\dist\lodash.underscore.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\LICENSE.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\node_modules\lodash\lodash.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\test\findup-sync_test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\test\fixtures\a.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\test\fixtures\aaa.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\test\fixtures\a\b\bar.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\findup-sync\test\fixtures\a\foo.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\getobject\Gruntfile.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\getobject\lib\getobject.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\getobject\test\namespace_test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\examples\g.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\examples\usr-local.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\glob.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\graceful-fs\graceful-fs.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\graceful-fs\test\open.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\graceful-fs\test\ulimit.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\node_modules\inherits\inherits.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\00-setup.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\bash-comparison.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\cwd-test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\mark.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\nocase-nomagic.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\pause-resume.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\root-nomount.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\root.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\glob\test\zz-cleanup.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\examples.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\Gruntfile.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\dist\lodash.compat.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\dist\lodash.compat.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\dist\lodash.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\dist\lodash.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\dist\lodash.underscore.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\dist\lodash.underscore.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\LICENSE.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\lodash\lodash.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\dist\underscore.string.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\lib\underscore.string.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\run-qunit.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\speed.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\strings.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\strings_standalone.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_standalone.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\arrays.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\chaining.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\collections.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\functions.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\index.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\objects.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\speed.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\utility.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\vendor\jquery.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\vendor\jslitmus.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\vendor\qunit.css" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\test_underscore\vendor\qunit.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\node_modules\underscore.string\test\underscore.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-log\test\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\Gruntfile.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\test\fixtures\Gruntfile-execArgv-child.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\test\fixtures\Gruntfile-execArgv.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\test\fixtures\Gruntfile-print-text.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\test\fixtures\spawn-multibyte.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\test\fixtures\spawn.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\grunt-legacy-util\test\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\hooker\child.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\hooker\dist\ba-hooker.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\hooker\dist\ba-hooker.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\hooker\grunt.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\hooker\lib\hooker.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\hooker\parent.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\hooker\test\hooker_test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\encodings\big5.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\encodings\gbk.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\encodings\singlebyte.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\encodings\table\big5.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\encodings\table\gbk.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\generation\generate-big5-table.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\generation\generate-singlebyte.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\big5-test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\big5File.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\cyrillic-test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\gbk-test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\gbkFile.txt" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\greek-test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\main-test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\performance.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\iconv-lite\test\turkish-test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\bin\js-yaml.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\examples\custom_types.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\examples\dumper.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\examples\sample_document.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\common.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\dumper.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\exception.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\loader.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\mark.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\require.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\schema.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\schema\default.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\schema\minimal.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\schema\safe.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\binary.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\bool.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\float.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\int.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\js\function.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\js\regexp.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\js\undefined.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\map.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\merge.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\null.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\omap.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\pairs.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\seq.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\set.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\str.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\lib\js-yaml\type\timestamp.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\arguments.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\choice.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\constants.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\help.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\nargs.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\parents.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\prefix_chars.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\sub_commands.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\sum.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\examples\testformatters.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\append.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\append\constant.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\count.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\help.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\store.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\store\constant.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\store\false.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\store\true.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\subparsers.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action\version.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\action_container.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argparse.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argument\error.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argument\exclusive.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argument\group.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\argument_parser.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\const.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\help\added_formatters.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\help\formatter.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\lib\namespace.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\dist\underscore.string.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\lib\underscore.string.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\run-qunit.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\speed.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\strings.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\strings_standalone.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_standalone.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\arrays.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\chaining.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\collections.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\functions.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\index.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\objects.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\speed.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\utility.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\vendor\jquery.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\vendor\jslitmus.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\vendor\qunit.css" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\test_underscore\vendor\qunit.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore.string\test\underscore.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\favicon.ico" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\index.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\index.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\underscore-min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\argparse\node_modules\underscore\underscore.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\bin\esparse.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\bin\esvalidate.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\esprima.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\test\compat.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\test\reflect.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\test\run.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\test\runner.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\js-yaml\node_modules\esprima\test\test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\lodash\lodash.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\lodash\lodash.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\lodash\lodash.underscore.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\lodash\lodash.underscore.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\minimatch.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\lib\lru-cache.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\test\basic.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\test\foreach.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\lru-cache\test\memory-leak.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\sigmund\bench.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\sigmund\sigmund.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\node_modules\sigmund\test\basic.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\test\basic.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\test\brace-expand.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\test\caching.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\test\defaults.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\minimatch\test\extglob-ending-with-state-char.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\nopt\bin\nopt.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\nopt\examples\my-program.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\nopt\lib\nopt.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\nopt\node_modules\abbrev\abbrev.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\nopt\node_modules\abbrev\test.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\rimraf\bin.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\rimraf\rimraf.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\rimraf\test\test-async.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\rimraf\test\test-sync.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\dist\underscore.string.min.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\lib\underscore.string.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\run-qunit.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\speed.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\strings.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\strings_standalone.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_standalone.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\arrays.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\chaining.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\collections.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\functions.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\objects.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\speed.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\temp.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\temp_tests.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\test.html" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\utility.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\vendor\jquery.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\vendor\jslitmus.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\vendor\qunit.css" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\test_underscore\vendor\qunit.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\underscore.string\test\underscore.js" />
+    <Content Include="slideshow\node_modules\grunt\node_modules\which\which.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="slideshow\node_modules\grunt-contrib-uglify\node_modules\maxmin\node_modules\gzip-size\node_modules\concat-stream\node_modules\readable-stream\node_modules\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
